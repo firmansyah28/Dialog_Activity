@@ -2,6 +2,7 @@ package com.example.projecttracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -45,5 +46,15 @@ public class kelola_data_mahasiswa extends AppCompatActivity {
                 Toast.makeText(kelola_data_mahasiswa.this, "Anda memilih = " + items , Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    public void GoToCreate(View view) {
+        Intent intent = new Intent(kelola_data_mahasiswa.this, CreateActivity.class);
+        startActivity(intent);
+    }
+
+    public void GoToUpdate(View view) {
+        Intent intent = new Intent(kelola_data_mahasiswa.this, UpdateActivity.class);
+        startActivity(intent);
     }
 }
