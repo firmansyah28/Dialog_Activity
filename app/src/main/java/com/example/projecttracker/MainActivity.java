@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button helpBtn = (Button)findViewById(R.id.helpButton);
-        helpBtn.setOnClickListener(helpBButtonListener);
+        Button helpBtn = (Button)findViewById(R.id.HelpButton);
+        helpBtn.setOnClickListener(HelpBButtonListener);
 
         if (savedInstanceState != null){
             Log.d("Proteintracker",savedInstanceState.getString("abc"));
@@ -54,8 +54,9 @@ public class MainActivity extends AppCompatActivity {
         myBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText myEditeText = (EditText) findViewById(R.id.editText1);
-                Log.d("Proteintracker", myEditeText.getText().toString());
+                Intent intent = new Intent(MainActivity.this, kelola_data_mahasiswa.class);
+                startActivity(intent);
+                Log.d("Proteintracker", myEditText.getText().toString());
             };
 
             private View.OnClickListener helpButtonListener = new View.OnClickListener() {
