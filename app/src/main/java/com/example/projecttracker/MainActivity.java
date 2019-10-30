@@ -2,7 +2,6 @@ package com.example.projecttracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.frameMain,new MahasiswaFragmen());
+                FragmentTransaction replace = ft.replace(R.id.frameMain, new MahasiswaFragmen());
                 ft.commit();
             }
         });
 
         Button helpBtn = (Button)findViewById(R.id.HelpButton);
-        helpBtn.setOnClickListener(HelpBButtonListener);
+        helpBtn.setOnClickListener(HelpButtonListener);
 
         if (savedInstanceState != null){
             Log.d("Proteintracker",savedInstanceState.getString("abc"));
@@ -58,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 Log.d("Proteintracker", myEditText.getText().toString());
             };
+
 
             private View.OnClickListener helpButtonListener = new View.OnClickListener() {
                 @Override
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 
             };
+
         });
 
         }
@@ -82,6 +83,10 @@ public class MainActivity extends AppCompatActivity {
     public void GoToKelola(View view) {
         Intent intent = new Intent(MainActivity.this, kelola_data_mahasiswa.class);
         startActivity(intent);
+    }
+
+    public void GoToDialog(View view) {
+        Intent intent = new Intent(MainActivity.this,DialogActivity.class);
     }
 }
 

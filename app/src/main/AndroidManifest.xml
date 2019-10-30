@@ -9,20 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        <activity android:name=".RecyleViewActivity"></activity>
+        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".CobaMenuActivity" />
+        <activity android:name=".RecyleViewActivity" />
         <activity android:name=".CreateActivity" />
         <activity android:name=".UpdateActivity" />
         <activity android:name=".kelola_data_mahasiswa" />
         <activity android:name=".ListActivity" />
         <activity android:name=".HelpActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
 
-        </activity>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
     </application>
 
 </manifest>
